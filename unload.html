@@ -4,37 +4,24 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Unload — The Weight</title>
-  <meta name="description" content="A private place to write out what’s weighing on you. Nothing is sent or saved.">
+  <meta name="description" content="A quiet, private place to write out what’s weighing on you. Nothing is sent or saved.">
   <meta name="robots" content="noindex, nofollow">
-  <meta name="theme-color" content="#101a2e">
+  <meta name="theme-color" content="#14283f">
   <link rel="stylesheet" href="assets/css/styles.css">
   <script defer src="assets/js/unload.js"></script>
 </head>
-<body>
+<body class="quiet">
   <div class="proto-banner" role="note">Unofficial design prototype for review. Not the official site of The Weight (<a href="https://theweightmen.com/">theweightmen.com</a>).</div>
   <a class="skip-link" href="#main">Skip to main content</a>
-
-  <!-- Immediate support: on every page, works without JavaScript -->
-  <div class="help-bar" role="region" aria-label="Immediate support">
-    <div class="container help-bar__inner">
-      <p class="help-bar__text"><span class="help-bar__dot" aria-hidden="true"></span><span class="help-bar__long">Need to talk now?</span> <span class="help-bar__free">Free, 24/7</span></p>
-      <div class="help-bar__actions">
-        <a class="hb-btn hb-btn--strong" href="tel:988">Call 988</a>
-        <a class="hb-btn" href="sms:988">Text 988</a>
-        <a class="hb-btn hb-btn--ghost" href="resources.html#urgent">More help<span class="sr-only">: emergency and crisis lines</span></a>
-      </div>
-    </div>
-  </div>
-
   <header class="site-header">
     <div class="container site-header__inner">
-      <a class="brand" href="index.html" aria-label="The Weight, home"><span class="brand__mark" aria-hidden="true"></span>The Weight</a>
-      <nav aria-label="Main">
-        <ul class="nav" role="list">
-          <li><a href="resources.html">Resources</a></li>
-          <li><a href="about.html">About</a></li>
-        </ul>
-      </nav>
+      <a class="brand" href="index.html" aria-label="The Weight, home"><span class="brand__mark" aria-hidden="true"></span><span class="brand__text">The Weight</span></a>
+      <nav aria-label="Main"><ul class="nav" role="list"><li><a href="index.html">Home</a></li><li><a href="resources.html">Resources</a></li><li><a href="about.html">About</a></li></ul></nav>
+      <div class="crisis" role="group" aria-label="Talk to someone now, free, 24/7">
+        <a class="crisis__btn crisis__btn--call" href="tel:988"><svg class="icon " viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Call 988</a>
+        <a class="crisis__btn" href="sms:988"><svg class="icon " viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg>Text 988</a>
+        <a class="crisis__btn crisis__btn--more" href="#urgent">Help<span class="sr-only">: emergency and crisis lines</span></a>
+      </div>
     </div>
   </header>
 
@@ -43,52 +30,98 @@
       <div class="container narrow">
         <p class="eyebrow">Unload</p>
         <h1>Set it down here.</h1>
-        <p class="page__lead">Write whatever’s on your mind, as messy as it needs to be. No judgment, and no advice.</p>
-        <p class="panel"><strong>Private:</strong> what you type stays on this page in your browser. It isn’t sent or saved, and nobody reads it. It’s gone when you clear it, refresh, or close the tab.</p>
+        <p class="page__lead">Write whatever’s on your mind, as messy as it needs to be. No judgment. No advice.</p>
+        <p class="privacy-note"><svg class="icon " viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><span>Private. What you type stays on this page. It isn’t sent or saved, and it’s gone when you leave.</span></p>
         <form id="unload-form" onsubmit="return false">
-          <p class="field" id="prompt-label"><strong>Stuck on how to start? Tap one:</strong></p>
-          <ul class="prompts" role="list" aria-labelledby="prompt-label">
-            <li><button type="button" class="chip" data-prompt="What’s weighing on me is…">What’s weighing on me</button></li>
-            <li><button type="button" class="chip" data-prompt="What I haven’t said is…">What I haven’t said</button></li>
-            <li><button type="button" class="chip" data-prompt="One thing I’d change is…">One thing I’d change</button></li>
-            <li><button type="button" class="chip" data-prompt="What I wish I could tell them is…">What I wish I could tell them</button></li>
+          <ul class="prompts" role="list" aria-label="Need a way to start? Tap one">
+            <li><button type="button" class="prompt" data-prompt="What’s weighing on me is…">What’s weighing on me</button></li>
+            <li><button type="button" class="prompt" data-prompt="What I haven’t said is…">What I haven’t said</button></li>
+            <li><button type="button" class="prompt" data-prompt="One thing I’d change is…">One thing I’d change</button></li>
+            <li><button type="button" class="prompt" data-prompt="What I wish I could tell them is…">What I wish I could tell them</button></li>
           </ul>
-          <div class="field">
-            <label for="unload-text">Write it out</label>
-            <textarea id="unload-text" rows="10" autocomplete="off" aria-describedby="unload-count"></textarea>
-            <p class="meta" id="unload-count" aria-live="polite">0 words</p>
+          <label for="unload-text" class="sr-only">Write it out</label>
+          <textarea id="unload-text" class="paper" rows="10" autocomplete="off" aria-describedby="unload-count" placeholder="Start anywhere…"></textarea>
+          <div class="paper-bar">
+            <p class="meta" id="unload-count" aria-live="polite" style="margin:0;color:var(--on-navy-muted)">0 words</p>
+            <button type="button" class="btn btn--link" id="unload-clear"><svg class="icon " viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 0 1 14-5.3L20 9M20 4v5h-5M20 12a8 8 0 0 1-14 5.3L4 15M4 20v-5h5"/></svg>Clear what I wrote</button>
           </div>
-          <button type="button" class="btn btn--outline" id="unload-clear">Clear what I wrote</button>
-          <p class="status" id="unload-status" role="status"></p>
+          <p class="status" id="unload-status" role="status" style="color:var(--amber-hi)"></p>
         </form>
-        <h2>When you’re done</h2>
-        <div class="btn-row">
-          <a class="btn btn--navy" href="talk.html">Reach out to someone I trust</a>
-          <a class="btn btn--outline" href="index.html#wizard">Find a next step</a>
+        <div class="after">
+          <h2>When you’re ready</h2>
+          <ul class="after__list" role="list">
+            <li><a class="after__link" href="#urgent"><svg class="icon " viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Talk to someone now</a></li>
+            <li><a class="after__link" href="talk.html"><svg class="icon " viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20v-1a6 6 0 0 1 12 0v1"/><path d="M15 14.5a5 5 0 0 1 6 4.5v1"/></svg>Reach out to someone I trust</a></li>
+            <li><a class="after__link" href="index.html#wizard"><svg class="icon " viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>Find a next step</a></li>
+          </ul>
         </div>
-        <p class="meta" style="margin-top:1rem">Want to talk to a person right now? Call or text <a href="tel:988">988</a>, free, 24/7.</p>
       </div>
     </section>
-
   </main>
 
-  <footer class="site-footer">
-    <div class="container site-footer__inner">
-      <div>
-        <p class="brand brand--footer"><span class="brand__mark" aria-hidden="true"></span>The Weight</p>
-        <p class="site-footer__tag">You don’t have to carry it by yourself.</p>
+  <section class="urgent" id="urgent" aria-labelledby="urgent-title" tabindex="-1">
+    <div class="container">
+      <div class="urgent__head">
+        <h2 id="urgent-title" class="urgent__title">Need help right now?</h2>
+        <p class="urgent__sub">Free. Confidential. Open 24/7.</p>
       </div>
-      <nav aria-label="Footer">
-        <ul class="footer-links" role="list">
-          <li><a href="resources.html">All resources</a></li>
-          <li><a href="unload.html">Unload</a></li>
-          <li><a href="talk.html">Talk It Through</a></li>
-          <li><a href="about.html">About &amp; privacy</a></li>
+      <div class="urgent__grid">
+        <div class="tier-card tier-card--emergency">
+          <p class="tier">Emergency</p>
+          <h3>Someone is in danger right now</h3>
+          <p>Call 911 for police, fire or ambulance.</p>
+          <a class="btn btn--danger" href="tel:911"><svg class="icon " viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Call 911</a>
+        </div>
+        <div class="tier-card">
+          <p class="tier">Crisis line</p>
+          <h3>988 Suicide &amp; Crisis Lifeline</h3>
+          <p>For any emotional distress. You don’t have to be suicidal to reach out.</p>
+          <div class="btn-row">
+            <a class="btn btn--amber" href="tel:988"><svg class="icon " viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Call 988</a>
+            <a class="btn btn--ghost-light" href="sms:988"><svg class="icon " viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg>Text 988</a>
+            <a class="btn btn--ghost-light" href="https://chat.988lifeline.org/" target="_blank" rel="noopener">Chat online<span class="sr-only"> (opens in a new tab)</span></a>
+          </div>
+        </div>
+        <div class="tier-card">
+          <p class="tier">Crisis line · Veterans</p>
+          <h3>Veterans Crisis Line</h3>
+          <p>Veterans, service members and families. VA enrollment not required.</p>
+          <div class="btn-row">
+            <a class="btn btn--amber" href="tel:988"><svg class="icon " viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Call 988, press 1</a>
+            <a class="btn btn--ghost-light" href="sms:838255"><svg class="icon " viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg>Text 838255</a>
+          </div>
+        </div>
+      </div>
+      <details class="urgent__more">
+        <summary>Not safe at home, or being forced to work?</summary>
+        <ul>
+          <li><strong>Abuse by a partner or family member:</strong> National Domestic Violence Hotline, <a href="tel:18007997233">1-800-799-7233</a> or text <a href="sms:88788">88788</a>. Men are welcome.</li>
+          <li><strong>Sexual assault:</strong> RAINN, <a href="tel:18006564673">1-800-656-4673</a>.</li>
+          <li><strong>Trafficking:</strong> National Human Trafficking Hotline, <a href="tel:18883737888">1-888-373-7888</a> or text <a href="sms:233733">233733</a>.</li>
         </ul>
-      </nav>
+      </details>
+      <p class="urgent__note">The Weight is a peer-support and resource project. It is not a therapy provider, medical care or an emergency service.</p>
     </div>
-    <div class="container site-footer__fine">
-      <p><strong>Design prototype</strong> prepared for the owner of <a href="https://theweightmen.com/">theweightmen.com</a>. Not the official site. Nothing you choose here is saved or sent.</p>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__inner">
+        <div>
+          <p class="brand brand--footer"><span class="brand__mark" aria-hidden="true"></span>The Weight</p>
+          <p class="site-footer__tag">You don’t have to carry it by yourself.</p>
+        </div>
+        <nav aria-label="Footer">
+          <ul class="footer-links" role="list">
+            <li><a href="index.html">Find your next step</a></li>
+            <li><a href="resources.html">All resources</a></li>
+            <li><a href="unload.html">Unload</a></li>
+            <li><a href="talk.html">Talk It Through</a></li>
+            <li><a href="about.html">About &amp; privacy</a></li>
+          </ul>
+        </nav>
+      </div>
+      <p class="site-footer__fine"><strong>Unofficial design prototype</strong> prepared for the founder of <a href="https://theweightmen.com/">theweightmen.com</a>. Not the official site. Nothing you choose or type here is saved or sent.</p>
     </div>
   </footer>
 </body>

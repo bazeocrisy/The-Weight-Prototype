@@ -46,6 +46,14 @@
     } else fallback();
   });
 
+  document.querySelectorAll("[data-add]").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var add = b.getAttribute("data-add");
+      note.value = note.value.trim() ? note.value.trim() + " " + add : add;
+      update();
+    });
+  });
+
   if (navigator.share) {
     share.hidden = false;
     share.addEventListener("click", function () { navigator.share({ text: build() }).catch(function () {}); });
@@ -54,7 +62,7 @@
   document.getElementById("msg-clear").addEventListener("click", function () {
     form.reset();
     update();
-    status.textContent = "Cleared.";
+    status.textContent = "Cleared. Nothing was saved.";
     who.focus();
   });
   update();

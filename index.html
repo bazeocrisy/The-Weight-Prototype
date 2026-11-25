@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>The Weight — You don’t have to carry it by yourself.</title>
-  <meta name="description" content="Free, private, no sign-up. Answer two quick questions and get one clear next step. For men carrying stress, grief, divorce, fatherhood, money worries, loneliness, and big life changes.">
+  <meta name="description" content="Free, private, no sign-up. Answer two quick questions and get one clear next step.">
   <meta name="robots" content="noindex, nofollow">
-  <meta name="theme-color" content="#101a2e">
+  <meta name="theme-color" content="#14283f">
   <link rel="stylesheet" href="assets/css/styles.css">
   <script defer src="assets/js/resources.js"></script>
   <script defer src="assets/js/common.js"></script>
@@ -15,85 +15,90 @@
 <body>
   <div class="proto-banner" role="note">Unofficial design prototype for review. Not the official site of The Weight (<a href="https://theweightmen.com/">theweightmen.com</a>).</div>
   <a class="skip-link" href="#wizard">Skip to the questions</a>
-
-  <!-- Immediate support: on every page, works without JavaScript -->
-  <div class="help-bar" role="region" aria-label="Immediate support">
-    <div class="container help-bar__inner">
-      <p class="help-bar__text"><span class="help-bar__dot" aria-hidden="true"></span><span class="help-bar__long">Need to talk now?</span> <span class="help-bar__free">Free, 24/7</span></p>
-      <div class="help-bar__actions">
-        <a class="hb-btn hb-btn--strong" href="tel:988">Call 988</a>
-        <a class="hb-btn" href="sms:988">Text 988</a>
-        <a class="hb-btn hb-btn--ghost" href="#urgent">More help<span class="sr-only">: emergency and crisis lines</span></a>
-      </div>
-    </div>
-  </div>
-
   <header class="site-header">
     <div class="container site-header__inner">
-      <a class="brand" href="index.html" aria-label="The Weight, home"><span class="brand__mark" aria-hidden="true"></span>The Weight</a>
-      <nav aria-label="Main">
-        <ul class="nav" role="list">
-          <li><a href="resources.html">Resources</a></li>
-          <li><a href="about.html">About</a></li>
-        </ul>
-      </nav>
+      <a class="brand" href="index.html" aria-label="The Weight, home"><span class="brand__mark" aria-hidden="true"></span><span class="brand__text">The Weight</span></a>
+      <nav aria-label="Main"><ul class="nav" role="list"><li><a href="index.html" aria-current="page">Home</a></li><li><a href="resources.html">Resources</a></li><li><a href="about.html">About</a></li></ul></nav>
+      <div class="crisis" role="group" aria-label="Talk to someone now, free, 24/7">
+        <a class="crisis__btn crisis__btn--call" href="tel:988"><svg class="icon " viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Call 988</a>
+        <a class="crisis__btn" href="sms:988"><svg class="icon " viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg>Text 988</a>
+        <a class="crisis__btn crisis__btn--more" href="#urgent">Help<span class="sr-only">: emergency and crisis lines</span></a>
+      </div>
     </div>
   </header>
 
-  <main id="main">
+  <main id="main" tabindex="-1">
     <section class="hero" aria-labelledby="hero-title">
-      <div class="container hero__inner">
-        <h1 class="hero__title" id="hero-title">You don’t have to carry it by yourself.</h1>
-        <p class="hero__lead">Free and private. No sign-up. Answer two quick questions and get one clear next step.</p>
+      <div class="container hero__grid">
+        <div>
+          <h1 class="hero__title" id="hero-title">You don’t have to carry it by yourself.</h1>
+          <p class="hero__lead">Whatever you’re carrying, let’s find your next step.</p>
+          <ul class="trust" role="list">
+            <li><svg class="icon " viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Free</li><li><svg class="icon " viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Private</li><li><svg class="icon " viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>No sign-up</li>
+          </ul>
+        </div>
+        <figure class="hero__media">
+          <picture>
+            <source type="image/webp" srcset="assets/images/the-weight-hero-960.webp 960w, assets/images/the-weight-hero.webp 1672w" sizes="(min-width: 900px) 520px, 100vw">
+            <img src="assets/images/the-weight-hero-960.jpg" width="960" height="540" loading="lazy" decoding="async"
+              alt="Five men of different ages and backgrounds sit together in armchairs, talking. Illustrative image.">
+          </picture>
+        </figure>
       </div>
     </section>
 
     <section class="wizard" id="wizard" aria-label="Find your next step" tabindex="-1">
       <div class="container">
-        <ol class="progress" aria-label="Progress">
-          <li class="progress__item is-current" data-progress="1" aria-current="step"><span class="progress__num" aria-hidden="true">1</span><span class="progress__label">What’s weighing on you</span></li>
-          <li class="progress__item" data-progress="2"><span class="progress__num" aria-hidden="true">2</span><span class="progress__label">What would help</span></li>
-          <li class="progress__item" data-progress="3"><span class="progress__num" aria-hidden="true">3</span><span class="progress__label">Your next step</span></li>
-        </ol>
+        <div class="wizard__panel">
+          <ol class="progress" aria-label="Progress">
+            <li class="progress__item is-current" data-progress="1" aria-current="step"><span class="progress__num" aria-hidden="true">1</span><span class="progress__label">What’s weighing on you</span></li>
+            <li class="progress__item" data-progress="2"><span class="progress__num" aria-hidden="true">2</span><span class="progress__label">What would help</span></li>
+            <li class="progress__item" data-progress="3"><span class="progress__num" aria-hidden="true">3</span><span class="progress__label">Your next step</span></li>
+          </ol>
+          <p class="progress__text" id="progress-text" aria-hidden="true">Step 1 of 2</p>
+          <p class="sr-only" role="status" aria-live="polite" id="wizard-status"></p>
 
-        <p class="progress__text" id="progress-text" aria-hidden="true">Step 1 of 2</p>
-        <p class="sr-only" role="status" aria-live="polite" id="wizard-status"></p>
+          <div class="step" id="step-1" data-step="1">
+            <h2 class="step__title" tabindex="-1">What’s weighing on you?</h2>
+            <p class="step__hint">Pick the closest one.</p>
+            <ul class="cards" role="list" id="topic-cards"></ul>
+            <noscript>
+              <div class="noscript-box">
+                <p><strong>The questions need JavaScript.</strong> Everything is still one tap away:</p>
+                <ul>
+                  <li><a href="resources.html">See all support resources</a></li>
+                  <li><a href="unload.html">Write it out privately (Unload)</a></li>
+                  <li>Call or text <a href="tel:988">988</a> any time. Emergency: <a href="tel:911">911</a>.</li>
+                </ul>
+              </div>
+            </noscript>
+          </div>
 
-        <!-- STEP 1 -->
-        <div class="step" id="step-1" data-step="1">
-          <h2 class="step__title" tabindex="-1">What’s weighing on you?</h2>
-          <p class="step__hint">Pick the closest one. You can go back anytime.</p>
-          <ul class="cards" role="list" id="topic-cards">
-            <!-- Filled from TW.TOPICS in assets/js/resources.js. Fallback links below if JavaScript is off. -->
-          </ul>
-          <noscript>
-            <div class="noscript-box">
-              <p><strong>The step-by-step questions need JavaScript.</strong> Everything is still one tap away:</p>
-              <ul>
-                <li><a href="resources.html">See all support resources</a></li>
-                <li><a href="unload.html">Write it out privately (Unload)</a></li>
-                <li>Call or text <a href="tel:988">988</a> any time. Emergency: <a href="tel:911">911</a>.</li>
-              </ul>
-            </div>
-          </noscript>
-        </div>
+          <div class="step" id="step-2" data-step="2" hidden>
+            <p class="step__crumb" id="step-2-crumb"></p>
+            <h2 class="step__title" tabindex="-1">What would help right now?</h2>
+            <p class="step__hint">Pick one. Nothing here is saved.</p>
+            <ul class="cards cards--needs" role="list" id="need-cards"></ul>
+          </div>
 
-        <!-- STEP 2 -->
-        <div class="step" id="step-2" data-step="2" hidden>
-          <p class="step__crumb" id="step-2-crumb"></p>
-          <h2 class="step__title" tabindex="-1">What would help right now?</h2>
-          <p class="step__hint">Pick one. Nothing here is saved.</p>
-          <ul class="cards cards--needs" role="list" id="need-cards"></ul>
-        </div>
+          <div class="step" id="step-3" data-step="3" hidden>
+            <div id="result"></div>
+          </div>
 
-        <!-- RESULT -->
-        <div class="step" id="step-3" data-step="3" hidden>
-          <div id="result"></div>
-        </div>
+          <div class="wizard__controls" id="wizard-controls" hidden>
+            <button type="button" class="btn btn--link" id="btn-back"><svg class="icon " viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>Back</button>
+            <button type="button" class="btn btn--link" id="btn-restart">Start over</button>
+          </div>
 
-        <div class="wizard__controls" id="wizard-controls" hidden>
-          <button type="button" class="btn btn--quiet" id="btn-back"><span aria-hidden="true">←</span> Back</button>
-          <button type="button" class="btn btn--quiet" id="btn-restart">Start over</button>
+          <nav class="shortcuts" id="shortcuts" aria-label="Go straight to">
+            <p class="shortcuts__title">Or go straight to</p>
+            <ul class="shortcuts__list" role="list">
+              <li><a class="shortcut" href="#urgent"><svg class="icon " viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>I need someone to talk to</a></li>
+              <li><a class="shortcut" href="resources.html#practical"><svg class="icon " viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1"/><circle cx="4.5" cy="12" r="1"/><circle cx="4.5" cy="18" r="1"/></svg>I need practical help</a></li>
+              <li><a class="shortcut" href="unload.html"><svg class="icon " viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l4-1 11-11-3-3L5 16z"/><path d="M14 6l3 3"/></svg>I need to unload</a></li>
+              <li><a class="shortcut" href="talk.html"><svg class="icon " viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20v-1a6 6 0 0 1 12 0v1"/><path d="M15 14.5a5 5 0 0 1 6 4.5v1"/></svg>Help me start a conversation</a></li>
+            </ul>
+          </nav>
         </div>
       </div>
     </section>
@@ -104,78 +109,81 @@
           <picture>
             <source type="image/webp" srcset="assets/images/the-weight-hero-960.webp 960w, assets/images/the-weight-hero.webp 1672w" sizes="(min-width: 900px) 520px, 100vw">
             <img src="assets/images/the-weight-hero-960.jpg" width="960" height="540" loading="lazy" decoding="async"
-              alt="Five men of different ages and backgrounds sit together in leather armchairs, looking up at a screen that reads “theweightmen.com — Welcome, all.”">
+              alt="Five men of different ages and backgrounds sit together in armchairs, talking. Illustrative image.">
           </picture>
         </figure>
         <div class="welcome__text">
           <h2 id="welcome-title">Wherever you are, you’re welcome here.</h2>
-          <p>Some men show up in the middle of a divorce. Some just got out of the service, lost a job, or don’t have a steady place to stay. You don’t need the right words, and you don’t need to have it figured out.</p>
-          <p><a class="text-link" href="about.html">Why The Weight exists</a></p>
+          <p>Some men show up in the middle of a divorce. Some just got out of the service, lost a job, or lost someone. You don’t need the right words, and you don’t need to have it figured out.</p>
+          <p><a href="about.html"><strong>Why The Weight exists</strong></a></p>
         </div>
-      </div>
-    </section>
-
-    <!-- Full urgent panel: target of "More help" on every page -->
-    <section class="urgent" id="urgent" aria-labelledby="urgent-title" tabindex="-1">
-      <div class="container">
-        <h2 id="urgent-title" class="urgent__title">Need help right now?</h2>
-        <div class="urgent__grid">
-          <div class="urgent__card urgent__card--emergency">
-            <p class="tier">Emergency</p>
-            <h3>Someone is in immediate danger</h3>
-            <p>Call 911.</p>
-            <a class="btn btn--danger" href="tel:911">Call 911</a>
-          </div>
-          <div class="urgent__card">
-            <p class="tier">Crisis line · free · 24/7</p>
-            <h3>988 Suicide &amp; Crisis Lifeline</h3>
-            <p>For any emotional distress. You don’t have to be suicidal to reach out.</p>
-            <div class="btn-row">
-              <a class="btn btn--amber" href="tel:988">Call 988</a>
-              <a class="btn btn--outline-light" href="sms:988">Text 988</a>
-              <a class="btn btn--outline-light" href="https://chat.988lifeline.org/" target="_blank" rel="noopener">Chat online<span class="sr-only"> (opens in a new tab)</span></a>
-            </div>
-          </div>
-          <div class="urgent__card">
-            <p class="tier">Crisis line · veterans · 24/7</p>
-            <h3>Veterans Crisis Line</h3>
-            <p>Veterans, service members, and families. VA enrollment not required.</p>
-            <div class="btn-row">
-              <a class="btn btn--amber" href="tel:988">Call 988, press 1</a>
-              <a class="btn btn--outline-light" href="sms:838255">Text 838255</a>
-            </div>
-          </div>
-        </div>
-        <details class="urgent__more">
-          <summary>Not safe at home, or being forced to work?</summary>
-          <ul class="plain-list">
-            <li><strong>Abuse by a partner or family member:</strong> National Domestic Violence Hotline, <a href="tel:18007997233">1-800-799-7233</a> or text <a href="sms:88788">88788</a>. Men are welcome.</li>
-            <li><strong>Sexual assault:</strong> RAINN, <a href="tel:18006564673">1-800-656-4673</a>.</li>
-            <li><strong>Trafficking:</strong> National Human Trafficking Hotline, <a href="tel:18883737888">1-888-373-7888</a> or text <a href="sms:233733">233733</a>.</li>
-          </ul>
-        </details>
-        <p class="urgent__note">The Weight is a peer-support and resource project. It is not a therapy provider, medical care, or an emergency service.</p>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container site-footer__inner">
-      <div>
-        <p class="brand brand--footer"><span class="brand__mark" aria-hidden="true"></span>The Weight</p>
-        <p class="site-footer__tag">You don’t have to carry it by yourself.</p>
+  <section class="urgent" id="urgent" aria-labelledby="urgent-title" tabindex="-1">
+    <div class="container">
+      <div class="urgent__head">
+        <h2 id="urgent-title" class="urgent__title">Need help right now?</h2>
+        <p class="urgent__sub">Free. Confidential. Open 24/7.</p>
       </div>
-      <nav aria-label="Footer">
-        <ul class="footer-links" role="list">
-          <li><a href="resources.html">All resources</a></li>
-          <li><a href="unload.html">Unload</a></li>
-          <li><a href="talk.html">Talk It Through</a></li>
-          <li><a href="about.html">About &amp; privacy</a></li>
+      <div class="urgent__grid">
+        <div class="tier-card tier-card--emergency">
+          <p class="tier">Emergency</p>
+          <h3>Someone is in danger right now</h3>
+          <p>Call 911 for police, fire or ambulance.</p>
+          <a class="btn btn--danger" href="tel:911"><svg class="icon " viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Call 911</a>
+        </div>
+        <div class="tier-card">
+          <p class="tier">Crisis line</p>
+          <h3>988 Suicide &amp; Crisis Lifeline</h3>
+          <p>For any emotional distress. You don’t have to be suicidal to reach out.</p>
+          <div class="btn-row">
+            <a class="btn btn--amber" href="tel:988"><svg class="icon " viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Call 988</a>
+            <a class="btn btn--ghost-light" href="sms:988"><svg class="icon " viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg>Text 988</a>
+            <a class="btn btn--ghost-light" href="https://chat.988lifeline.org/" target="_blank" rel="noopener">Chat online<span class="sr-only"> (opens in a new tab)</span></a>
+          </div>
+        </div>
+        <div class="tier-card">
+          <p class="tier">Crisis line · Veterans</p>
+          <h3>Veterans Crisis Line</h3>
+          <p>Veterans, service members and families. VA enrollment not required.</p>
+          <div class="btn-row">
+            <a class="btn btn--amber" href="tel:988"><svg class="icon " viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Call 988, press 1</a>
+            <a class="btn btn--ghost-light" href="sms:838255"><svg class="icon " viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg>Text 838255</a>
+          </div>
+        </div>
+      </div>
+      <details class="urgent__more">
+        <summary>Not safe at home, or being forced to work?</summary>
+        <ul>
+          <li><strong>Abuse by a partner or family member:</strong> National Domestic Violence Hotline, <a href="tel:18007997233">1-800-799-7233</a> or text <a href="sms:88788">88788</a>. Men are welcome.</li>
+          <li><strong>Sexual assault:</strong> RAINN, <a href="tel:18006564673">1-800-656-4673</a>.</li>
+          <li><strong>Trafficking:</strong> National Human Trafficking Hotline, <a href="tel:18883737888">1-888-373-7888</a> or text <a href="sms:233733">233733</a>.</li>
         </ul>
-      </nav>
+      </details>
+      <p class="urgent__note">The Weight is a peer-support and resource project. It is not a therapy provider, medical care or an emergency service.</p>
     </div>
-    <div class="container site-footer__fine">
-      <p><strong>Design prototype</strong> prepared for the owner of <a href="https://theweightmen.com/">theweightmen.com</a>. Not the official site. Nothing you choose here is saved or sent.</p>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__inner">
+        <div>
+          <p class="brand brand--footer"><span class="brand__mark" aria-hidden="true"></span>The Weight</p>
+          <p class="site-footer__tag">You don’t have to carry it by yourself.</p>
+        </div>
+        <nav aria-label="Footer">
+          <ul class="footer-links" role="list">
+            <li><a href="index.html">Find your next step</a></li>
+            <li><a href="resources.html">All resources</a></li>
+            <li><a href="unload.html">Unload</a></li>
+            <li><a href="talk.html">Talk It Through</a></li>
+            <li><a href="about.html">About &amp; privacy</a></li>
+          </ul>
+        </nav>
+      </div>
+      <p class="site-footer__fine"><strong>Unofficial design prototype</strong> prepared for the founder of <a href="https://theweightmen.com/">theweightmen.com</a>. Not the official site. Nothing you choose or type here is saved or sent.</p>
     </div>
   </footer>
 </body>

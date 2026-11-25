@@ -4,96 +4,143 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Talk It Through — The Weight</title>
-  <meta name="description" content="Write a short message asking someone you trust to listen or give honest feedback. You send it yourself.">
+  <meta name="description" content="Write a short message asking someone you trust to listen. You send it yourself.">
   <meta name="robots" content="noindex, nofollow">
-  <meta name="theme-color" content="#101a2e">
+  <meta name="theme-color" content="#14283f">
   <link rel="stylesheet" href="assets/css/styles.css">
   <script defer src="assets/js/talk.js"></script>
 </head>
 <body>
   <div class="proto-banner" role="note">Unofficial design prototype for review. Not the official site of The Weight (<a href="https://theweightmen.com/">theweightmen.com</a>).</div>
   <a class="skip-link" href="#main">Skip to main content</a>
-
-  <!-- Immediate support: on every page, works without JavaScript -->
-  <div class="help-bar" role="region" aria-label="Immediate support">
-    <div class="container help-bar__inner">
-      <p class="help-bar__text"><span class="help-bar__dot" aria-hidden="true"></span><span class="help-bar__long">Need to talk now?</span> <span class="help-bar__free">Free, 24/7</span></p>
-      <div class="help-bar__actions">
-        <a class="hb-btn hb-btn--strong" href="tel:988">Call 988</a>
-        <a class="hb-btn" href="sms:988">Text 988</a>
-        <a class="hb-btn hb-btn--ghost" href="resources.html#urgent">More help<span class="sr-only">: emergency and crisis lines</span></a>
-      </div>
-    </div>
-  </div>
-
   <header class="site-header">
     <div class="container site-header__inner">
-      <a class="brand" href="index.html" aria-label="The Weight, home"><span class="brand__mark" aria-hidden="true"></span>The Weight</a>
-      <nav aria-label="Main">
-        <ul class="nav" role="list">
-          <li><a href="resources.html">Resources</a></li>
-          <li><a href="about.html">About</a></li>
-        </ul>
-      </nav>
+      <a class="brand" href="index.html" aria-label="The Weight, home"><span class="brand__mark" aria-hidden="true"></span><span class="brand__text">The Weight</span></a>
+      <nav aria-label="Main"><ul class="nav" role="list"><li><a href="index.html">Home</a></li><li><a href="resources.html">Resources</a></li><li><a href="about.html">About</a></li></ul></nav>
+      <div class="crisis" role="group" aria-label="Talk to someone now, free, 24/7">
+        <a class="crisis__btn crisis__btn--call" href="tel:988"><svg class="icon " viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Call 988</a>
+        <a class="crisis__btn" href="sms:988"><svg class="icon " viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg>Text 988</a>
+        <a class="crisis__btn crisis__btn--more" href="#urgent">Help<span class="sr-only">: emergency and crisis lines</span></a>
+      </div>
     </div>
   </header>
 
   <main id="main" tabindex="-1">
     <section class="page">
-      <div class="container narrow">
-        <p class="eyebrow">Talk It Through</p>
-        <h1>Reach out to someone you trust</h1>
-        <p class="page__lead">A friend, brother, cousin, someone you served with, a pastor, a coach. It’s easier to ask when the words are already there.</p>
-        <p class="panel"><strong>The Weight never sends this.</strong> You copy it and send it yourself, from your own phone or email, to the person you choose.</p>
-        <form id="msg-form" onsubmit="return false">
-          <div class="field">
-            <label for="msg-who">Their first name <span class="meta">(optional)</span></label>
-            <input type="text" id="msg-who" autocomplete="off" maxlength="40">
+      <div class="container">
+        <div class="page-head">
+          <p class="eyebrow">Talk It Through</p>
+          <h1>Not sure how to ask? We’ll help with the words.</h1>
+          <p class="page__lead">A friend, a brother, someone you served with, a pastor, a coach. Asking is easier when the message is already written.</p>
+        </div>
+        <div class="talk">
+          <form id="msg-form" onsubmit="return false">
+            <p class="notice"><svg class="icon " viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><span><strong>The Weight never sends this.</strong> You copy it and send it yourself, to the person you choose.</span></p>
+            <div class="field">
+              <label class="field__label" for="msg-who"><span class="field__num" aria-hidden="true">1</span>Their first name <span class="optional">(optional)</span></label>
+              <input type="text" id="msg-who" autocomplete="off" maxlength="40">
+            </div>
+            <fieldset class="field">
+              <legend><span class="field__num" aria-hidden="true">2</span>What do you want from them?</legend>
+              <div class="radio-grid">
+                <label class="radio"><input type="radio" name="ask" value="listen" checked> Just listen</label>
+                <label class="radio"><input type="radio" name="ask" value="perspective"> Help me see it differently</label>
+                <label class="radio"><input type="radio" name="ask" value="feedback"> Honest feedback</label>
+                <label class="radio"><input type="radio" name="ask" value="steps"> Help with next steps</label>
+              </div>
+            </fieldset>
+            <div class="field">
+              <label class="field__label" for="msg-note"><span class="field__num" aria-hidden="true">3</span>Add a line <span class="optional">(optional)</span></label>
+              <input type="text" id="msg-note" autocomplete="off" maxlength="200">
+              <ul class="add-chips" role="list" aria-label="Or tap a suggestion">
+                <li><button type="button" class="chip" data-add="It’s been a rough few weeks.">It’s been a rough few weeks.</button></li>
+                <li><button type="button" class="chip" data-add="Nothing urgent.">Nothing urgent.</button></li>
+                <li><button type="button" class="chip" data-add="Coffee or a call this week?">Coffee or a call this week?</button></li>
+              </ul>
+            </div>
+          </form>
+          <div class="talk__preview">
+            <div class="phone-card">
+              <p class="phone-card__label" id="preview-label">Your message</p>
+              <p class="bubble" id="msg-preview" aria-labelledby="preview-label" aria-live="polite"></p>
+              <div class="btn-row">
+                <button type="button" class="btn btn--amber" id="msg-copy"><svg class="icon " viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3"/></svg>Copy message</button>
+                <a class="btn btn--ghost-light" id="msg-sms" href="sms:"><svg class="icon " viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg>Open in Messages</a>
+                <button type="button" class="btn btn--ghost-light" id="msg-share" hidden>Share…</button>
+                <button type="button" class="btn btn--link" id="msg-clear" style="color:var(--on-navy-muted)">Clear</button>
+              </div>
+              <p class="status" id="msg-status" role="status"></p>
+            </div>
+            <p class="meta" style="margin-top:.75rem">Would rather talk to someone trained, right now? Call or text <a href="tel:988">988</a>, free, 24/7.</p>
           </div>
-          <fieldset class="radio-grid">
-            <legend>What do you want from them?</legend>
-            <label class="radio"><input type="radio" name="ask" value="listen" checked> Just listen</label>
-            <label class="radio"><input type="radio" name="ask" value="perspective"> Help me see it differently</label>
-            <label class="radio"><input type="radio" name="ask" value="feedback"> Honest feedback</label>
-            <label class="radio"><input type="radio" name="ask" value="steps"> Help with next steps</label>
-          </fieldset>
-          <div class="field">
-            <label for="msg-note">Anything to add? <span class="meta">(optional)</span></label>
-            <input type="text" id="msg-note" autocomplete="off" maxlength="200">
-          </div>
-          <h2 class="h3" style="font-size:1.2rem" id="preview-label">Your message</h2>
-          <p class="preview" id="msg-preview" aria-labelledby="preview-label" aria-live="polite"></p>
-          <div class="btn-row">
-            <button type="button" class="btn btn--navy" id="msg-copy">Copy message</button>
-            <a class="btn btn--outline" id="msg-sms" href="sms:">Open in Messages</a>
-            <button type="button" class="btn btn--outline" id="msg-share" hidden>Share…</button>
-            <button type="button" class="btn btn--quiet" id="msg-clear">Clear</button>
-          </div>
-          <p class="status" id="msg-status" role="status"></p>
-        </form>
-        <p class="meta">Would rather talk to someone trained, right now? Call or text <a href="tel:988">988</a>, free, 24/7. Veterans: call 988 and press 1.</p>
+        </div>
       </div>
     </section>
-
   </main>
 
-  <footer class="site-footer">
-    <div class="container site-footer__inner">
-      <div>
-        <p class="brand brand--footer"><span class="brand__mark" aria-hidden="true"></span>The Weight</p>
-        <p class="site-footer__tag">You don’t have to carry it by yourself.</p>
+  <section class="urgent" id="urgent" aria-labelledby="urgent-title" tabindex="-1">
+    <div class="container">
+      <div class="urgent__head">
+        <h2 id="urgent-title" class="urgent__title">Need help right now?</h2>
+        <p class="urgent__sub">Free. Confidential. Open 24/7.</p>
       </div>
-      <nav aria-label="Footer">
-        <ul class="footer-links" role="list">
-          <li><a href="resources.html">All resources</a></li>
-          <li><a href="unload.html">Unload</a></li>
-          <li><a href="talk.html">Talk It Through</a></li>
-          <li><a href="about.html">About &amp; privacy</a></li>
+      <div class="urgent__grid">
+        <div class="tier-card tier-card--emergency">
+          <p class="tier">Emergency</p>
+          <h3>Someone is in danger right now</h3>
+          <p>Call 911 for police, fire or ambulance.</p>
+          <a class="btn btn--danger" href="tel:911"><svg class="icon " viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Call 911</a>
+        </div>
+        <div class="tier-card">
+          <p class="tier">Crisis line</p>
+          <h3>988 Suicide &amp; Crisis Lifeline</h3>
+          <p>For any emotional distress. You don’t have to be suicidal to reach out.</p>
+          <div class="btn-row">
+            <a class="btn btn--amber" href="tel:988"><svg class="icon " viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Call 988</a>
+            <a class="btn btn--ghost-light" href="sms:988"><svg class="icon " viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg>Text 988</a>
+            <a class="btn btn--ghost-light" href="https://chat.988lifeline.org/" target="_blank" rel="noopener">Chat online<span class="sr-only"> (opens in a new tab)</span></a>
+          </div>
+        </div>
+        <div class="tier-card">
+          <p class="tier">Crisis line · Veterans</p>
+          <h3>Veterans Crisis Line</h3>
+          <p>Veterans, service members and families. VA enrollment not required.</p>
+          <div class="btn-row">
+            <a class="btn btn--amber" href="tel:988"><svg class="icon " viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Call 988, press 1</a>
+            <a class="btn btn--ghost-light" href="sms:838255"><svg class="icon " viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg>Text 838255</a>
+          </div>
+        </div>
+      </div>
+      <details class="urgent__more">
+        <summary>Not safe at home, or being forced to work?</summary>
+        <ul>
+          <li><strong>Abuse by a partner or family member:</strong> National Domestic Violence Hotline, <a href="tel:18007997233">1-800-799-7233</a> or text <a href="sms:88788">88788</a>. Men are welcome.</li>
+          <li><strong>Sexual assault:</strong> RAINN, <a href="tel:18006564673">1-800-656-4673</a>.</li>
+          <li><strong>Trafficking:</strong> National Human Trafficking Hotline, <a href="tel:18883737888">1-888-373-7888</a> or text <a href="sms:233733">233733</a>.</li>
         </ul>
-      </nav>
+      </details>
+      <p class="urgent__note">The Weight is a peer-support and resource project. It is not a therapy provider, medical care or an emergency service.</p>
     </div>
-    <div class="container site-footer__fine">
-      <p><strong>Design prototype</strong> prepared for the owner of <a href="https://theweightmen.com/">theweightmen.com</a>. Not the official site. Nothing you choose here is saved or sent.</p>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__inner">
+        <div>
+          <p class="brand brand--footer"><span class="brand__mark" aria-hidden="true"></span>The Weight</p>
+          <p class="site-footer__tag">You don’t have to carry it by yourself.</p>
+        </div>
+        <nav aria-label="Footer">
+          <ul class="footer-links" role="list">
+            <li><a href="index.html">Find your next step</a></li>
+            <li><a href="resources.html">All resources</a></li>
+            <li><a href="unload.html">Unload</a></li>
+            <li><a href="talk.html">Talk It Through</a></li>
+            <li><a href="about.html">About &amp; privacy</a></li>
+          </ul>
+        </nav>
+      </div>
+      <p class="site-footer__fine"><strong>Unofficial design prototype</strong> prepared for the founder of <a href="https://theweightmen.com/">theweightmen.com</a>. Not the official site. Nothing you choose or type here is saved or sent.</p>
     </div>
   </footer>
 </body>
